@@ -10,23 +10,6 @@ const [activeThumb, setActiveThumb] = useState()
 
   return <>
     <Swiper
-      loop= {true}
-      spaceBetween={10}
-      navigation={true}
-      modules={[Navigation, Thumbs]}
-      grabCursor={true}
-      thumbs={{swiper : activeThumb}}
-      className='ImageSlider'
-    >
-      {
-        props.images.map((item, index) => (
-          <SwiperSlide key={index}>
-              <img src={item} alt="Random images" />
-          </SwiperSlide>
-        ))
-      }
-    </Swiper>
-    <Swiper
       onClick={setActiveThumb}
       loop= {true}
       spaceBetween={10}
@@ -44,6 +27,24 @@ const [activeThumb, setActiveThumb] = useState()
         ))
       }
     </Swiper>
+    <Swiper
+      loop= {true}
+      spaceBetween={10}
+      navigation={true}
+      modules={[Navigation, Thumbs]}
+      grabCursor={true}
+      thumbs={{swiper : activeThumb}}
+      className='ImageSlider'
+    >
+      {
+        props.images.map((item, index) => (
+          <SwiperSlide key={index}>
+              <img src={item} alt="Random images" />
+          </SwiperSlide>
+        ))
+      }
+    </Swiper>
+    
   </>
 }
 
