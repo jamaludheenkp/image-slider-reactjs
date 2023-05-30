@@ -15,7 +15,7 @@ const [activeThumb, setActiveThumb] = useState()
       navigation={true}
       modules={[Navigation, Thumbs]}
       grabCursor={true}
-      thumbs={{ swiper: activeThumb }}
+      thumbs={{swiper : activeThumb}}
       className='ImageSlider'
     >
       {
@@ -27,7 +27,7 @@ const [activeThumb, setActiveThumb] = useState()
       }
     </Swiper>
     <Swiper
-      onSwiper={setActiveThumb}
+      onClick={setActiveThumb}
       loop= {true}
       spaceBetween={10}
       slidesPerView={4}
